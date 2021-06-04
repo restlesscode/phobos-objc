@@ -22,8 +22,8 @@ jobs:
       script:
         - travis_retry bundle exec fastlane ios lint --env Core
       before_script:
-        - gem install bundler
-        - bundle install
+        #- gem install bundler
+        #- bundle install
         - bundle update fastlane
         
 branches:
