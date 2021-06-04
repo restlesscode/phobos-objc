@@ -17,7 +17,7 @@ enable_test = true
 
 Pod::Spec.new do |s|
   s.name             = "#{pod_name}"
-  s.version          = '0.1.1'
+  s.version          = '0.1.0'
   s.summary          = "#{pod_name} is a basic develop-kits for all the frameworks and apps."
   s.swift_version    = '5.0'
 
@@ -35,7 +35,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Restless Developer' => 'developer@codebase.codes' }
-  s.source           = { :git => 'https://github.com/restlesscode/phobos-swift.git', :tag => "#{name}-" + s.version.to_s }
+  s.source           = { :git => 'https://github.com/restlesscode/phobos-swift.git', :tag => "#{name}/" + s.version.to_s }
   s.social_media_url = 'https://twitter.com/CodesRestless'
 
   s.ios.deployment_target = '10.0'
