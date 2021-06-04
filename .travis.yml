@@ -14,6 +14,7 @@ install:
 
 stages:
   - lint_core
+  - lint_uicomponent
 
 jobs:
   include:
@@ -23,6 +24,9 @@ jobs:
     - stage: lint_core
       script:
         - bundle exec fastlane ios lint --env Core
+    - stage: lint_uicomponent
+      script:
+        - bundle exec fastlane ios lint --env UIComponent
         
 branches:
   only:
