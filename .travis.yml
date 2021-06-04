@@ -21,9 +21,9 @@ jobs:
         - PROJECT=Core METHOD=pod-lib-lint
       script:
         - travis_retry bundle exec fastlane ios lint --env Core
-      #before_script:
+      before_script:
         #- gem install bundler
-        #- bundle install
+        - bundle install
         #- bundle update fastlane
         
 branches:
