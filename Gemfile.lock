@@ -1,3 +1,10 @@
+GIT
+  remote: https://gitee.com/tjerwinchen/fastools.git
+  revision: b9a549517dad895f8eb43a8a2a36e5c8aa7e2ec1
+  branch: master
+  specs:
+    fastools (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -264,12 +271,14 @@ GEM
       xcpretty (~> 0.2, >= 0.0.7)
 
 PLATFORMS
+  ruby
   universal-darwin-20
 
 DEPENDENCIES
   cocoapods
   cocoapods-dependencies
   fastlane
+  fastools!
 
 BUNDLED WITH
    2.2.5

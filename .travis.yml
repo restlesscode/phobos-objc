@@ -1,0 +1,33 @@
+os: osx
+osx_image: xcode12.3
+language: objective-c
+cache:
+  bundler: true
+  cocoapods: true
+  directories:
+    # Built-in support for ccache doesn't seem to pick this up
+    - $HOME/.ccache
+
+# install dependencies
+install:
+  - bundle install
+
+stages:
+  - lint_core
+  - lint_uicomponent
+
+jobs:
+  include:
+    # The order of builds matters (even though they are run in parallel):
+    # Travis will schedule them in the same order they are listed here.
+
+    - stage: lint_core
+      script:
+        - bundle exec fastlane ios lint --env Core
+    - stage: lint_uicomponent
+      script:
+        - bundle exec fastlane ios lint --env UIComponent
+        
+branches:
+  only:
+    - develop

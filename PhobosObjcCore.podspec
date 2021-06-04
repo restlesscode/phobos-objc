@@ -11,13 +11,13 @@ name = "Core"
 pod_name = "#{group}#{name}"
 
 has_public_header_files = false
-has_resource_bundles = true
+has_resource_bundles = false
 enable_test = true
 
 
 Pod::Spec.new do |s|
   s.name             = "#{pod_name}"
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = "#{pod_name} is a basic develop-kits for all the frameworks and apps."
   s.swift_version    = '5.0'
 
@@ -48,8 +48,8 @@ TODO: Add long description of the pod here.
   s.exclude_files = "#{group}/#{name}/Classes/Privatized+third+party+code/SwiftyRSA/SwiftyRSA+ObjC.swift"
 
   s.preserve_paths = [
-    "{group}/#{name}/README.md",
-    "{group}/#{name}/CHANGELOG.md"
+    "#{group}/#{name}/README.md",
+    "#{group}/#{name}/CHANGELOG.md"
   ]
   
   if has_resource_bundles
