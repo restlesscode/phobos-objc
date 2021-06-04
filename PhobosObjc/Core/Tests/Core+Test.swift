@@ -38,5 +38,8 @@ class Test: XCTestCase {
   }
 
   func testCase() {
+    let bundle = PhobosObjcCore.bundle()
+    let lastPath = bundle.bundlePath.components(separatedBy: "/").last
+    XCTAssertEqual(lastPath, "PhobosObjcCore.framework")
   }
 }

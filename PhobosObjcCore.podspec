@@ -11,7 +11,7 @@ name = "Core"
 pod_name = "#{group}#{name}"
 
 has_public_header_files = false
-has_resource_bundles = true
+has_resource_bundles = false
 enable_test = true
 
 
@@ -48,8 +48,8 @@ TODO: Add long description of the pod here.
   s.exclude_files = "#{group}/#{name}/Classes/Privatized+third+party+code/SwiftyRSA/SwiftyRSA+ObjC.swift"
 
   s.preserve_paths = [
-    "{group}/#{name}/README.md",
-    "{group}/#{name}/CHANGELOG.md"
+    "#{group}/#{name}/README.md",
+    "#{group}/#{name}/CHANGELOG.md"
   ]
   
   if has_resource_bundles

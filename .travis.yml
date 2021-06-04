@@ -1,0 +1,31 @@
+os: osx
+osx_image: xcode11
+language: objective-c
+cache:
+  bundler: true
+  cocoapods: true
+  directories:
+    # Built-in support for ccache doesn't seem to pick this up
+    - $HOME/.ccache
+
+stages:
+  - test
+
+jobs:
+  include:
+    # The order of builds matters (even though they are run in parallel):
+    # Travis will schedule them in the same order they are listed here.
+
+    - stage: test
+      env:
+        - PROJECT=Core METHOD=pod-lib-lint
+      script:
+      before_script:
+        - gem install bundler
+        - bundle install
+        - bundle update fastlane
+        - travis_retry bundle exec fastlane ios lint --env Core
+        
+branches:
+  only:
+    - develop
