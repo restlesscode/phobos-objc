@@ -20,7 +20,7 @@ jobs:
       env:
         - PROJECT=Core METHOD=pod-lib-lint
       script:
-        - bundle install
+        #- bundle install
         - bundle exec fastlane ios lint --env Core
       #before_script:
         #- gem install bundler
