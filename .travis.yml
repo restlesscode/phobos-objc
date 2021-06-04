@@ -9,21 +9,22 @@ cache:
     - $HOME/.ccache
 
 stages:
-  - test
+  - test_core
 
 jobs:
   include:
     # The order of builds matters (even though they are run in parallel):
     # Travis will schedule them in the same order they are listed here.
 
-    - stage: test
+    - stage: test_core
       env:
         - PROJECT=Core METHOD=pod-lib-lint
       script:
+        - travis_retry bundle exec fastlane ios lint --env Core
       before_script:
+        - gem install bundler
         - bundle install
         - bundle update fastlane
-        - travis_retry bundle exec fastlane ios lint --env Core
         
 branches:
   only:
