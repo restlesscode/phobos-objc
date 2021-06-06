@@ -25,9 +25,14 @@ jobs:
     - stage: lint_core
       script:
         - bundle exec fastlane ios lint --env Core
+      on:
+        branch: master
+
     - stage: lint_uicomponent
       script:
         - bundle exec fastlane ios lint --env UIComponent
+      on:
+        branch: master
 
     - stage: build_debug
       before_script: "cd Example"
@@ -40,3 +45,4 @@ jobs:
 branches:
   only:
     - master
+    - develop
