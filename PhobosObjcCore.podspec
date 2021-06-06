@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/restlesscode/phobos-swift'
+  s.homepage         = 'https://github.com/restlesscode/phobos-objc'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Restless Developer' => 'developer@codebase.codes' }
