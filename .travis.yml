@@ -13,6 +13,7 @@ install:
   - bundle install
 
 stages:
+  - build_debug
   - lint_core
   - lint_uicomponent
 
@@ -27,7 +28,15 @@ jobs:
     - stage: lint_uicomponent
       script:
         - bundle exec fastlane ios lint --env UIComponent
-        
+
+    - stage: build_debug
+      before_script: "cd Example"
+      script:
+        - bundle exec pod install --verbose
+        - bundle exec fastlane ios build configuration:Debug skip_archive:true --env ci
+      on:
+        branch: develop
+
 branches:
   only:
     - master
