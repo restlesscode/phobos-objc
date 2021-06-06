@@ -30,4 +30,4 @@ jobs:
         
 branches:
   only:
-    - develop
+    - master
