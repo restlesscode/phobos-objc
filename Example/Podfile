@@ -6,6 +6,8 @@ target 'PhobosObjcExample' do
   use_frameworks!
 
   # Pods for PhobosObjcExample
+  pod 'PhobosObjc/Core', :path => '../', :inhibit_warnings => false
+  pod 'PhobosObjc/UIComponent', :path => '../', :inhibit_warnings => false
   pod 'PhobosObjcCore', :path => '../', :inhibit_warnings => false, :testspecs => ['Tests']
   pod 'PhobosObjcUIComponent', :path => '../', :inhibit_warnings => false, :testspecs => ['Tests']
 end

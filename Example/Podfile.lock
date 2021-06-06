@@ -1,27 +1,36 @@
 PODS:
-  - PhobosObjcCore (0.1.0)
-  - PhobosObjcCore/Tests (0.1.0)
-  - PhobosObjcUIComponent (0.1.0):
+  - PhobosObjc/Core (0.1.0):
+    - PhobosObjcCore (~> 0.1.1)
+  - PhobosObjc/UIComponent (0.1.0):
+    - PhobosObjcUIComponent (~> 0.1.1)
+  - PhobosObjcCore (0.1.2)
+  - PhobosObjcCore/Tests (0.1.2)
+  - PhobosObjcUIComponent (0.1.1):
     - PhobosObjcCore (~> 0.1.0)
-  - PhobosObjcUIComponent/Tests (0.1.0):
+  - PhobosObjcUIComponent/Tests (0.1.1):
     - PhobosObjcCore (~> 0.1.0)
 
 DEPENDENCIES:
+  - PhobosObjc/Core (from `../`)
+  - PhobosObjc/UIComponent (from `../`)
   - PhobosObjcCore (from `../`)
   - PhobosObjcCore/Tests (from `../`)
   - PhobosObjcUIComponent (from `../`)
   - PhobosObjcUIComponent/Tests (from `../`)
 
 EXTERNAL SOURCES:
+  PhobosObjc:
+    :path: "../"
   PhobosObjcCore:
     :path: "../"
   PhobosObjcUIComponent:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PhobosObjcCore: feb793afd30a61c205efef514b03566e9de13b44
-  PhobosObjcUIComponent: 914e27e226935b0d1434706a3bdf215b41ecf53b
+  PhobosObjc: 94b4989d196dc7c9da43f7ffea9c8d314ae64b55
+  PhobosObjcCore: 8b99624750c95717264e2a4ce1e6dd23b2241389
+  PhobosObjcUIComponent: 6345ead048acf5f517e1b1ff4b5c4c7d484bfd53
 
-PODFILE CHECKSUM: 3719e24c1e1a80501ad4887ff5b3feaeeb298b9b
+PODFILE CHECKSUM: 3d0e29b5cb8391b227c77e62ffc59acb7749c9a4
 
 COCOAPODS: 1.10.1
